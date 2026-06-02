@@ -1,6 +1,5 @@
 #pragma once
 #include <mc_control/fsm/Controller.h>
-#include <mc_rbdyn/VirtualTorqueSensor.h>
 #include <mc_tasks/CompliantPostureTask.h>
 #include <mc_tasks/CompliantEndEffectorTask.h>
 
