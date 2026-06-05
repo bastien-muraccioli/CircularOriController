@@ -86,7 +86,10 @@ transitions:
 # Initial state
 init: FullState
 
-# Plugins: [RosImuSensor, ExternalForcesEstimator, ObstacleDetectionJerkEstimator]
+# Plugins for simulation
+Plugins: [TorqueResidual, EnergyResidual, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting]
+# Plugins for deployment on real robot
+# Plugins: [RosImuSensor, RosForceSensor, TorqueResidual, EnergyResidual, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting]
 
 ObserverPipelines:
   - name: Pipeline
