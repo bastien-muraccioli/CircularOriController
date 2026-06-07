@@ -3,7 +3,7 @@
 #include <mc_control/fsm/State.h>
 #include "../CollisionBenchmarkController.h"
 
-struct CollisionBenchmarkController_BigRotate_InitialPose : mc_control::fsm::State
+struct CollisionBenchmarkController_FirstJointRotation_InitialPose : mc_control::fsm::State
 {
 
   void configure(const mc_rtc::Configuration & config) override;

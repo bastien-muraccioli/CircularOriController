@@ -3,7 +3,7 @@
 #include <mc_control/fsm/State.h>
 #include "../CollisionBenchmarkController.h"
 
-struct CollisionBenchmarkController_BigRotate : mc_control::fsm::State
+struct CollisionBenchmarkController_FirstJointRotation : mc_control::fsm::State
 {
 
   void configure(const mc_rtc::Configuration & config) override;
@@ -25,7 +25,8 @@ private:
   double q_max_;
   double delta_q_;
   double accel_ratio_ = 0.25; // Ratio of acceleration to maximum velocity
-  double vel_max_ = 1.8; //2.0944; // Maximum velocity
+  // double vel_max_ = 1.8; //2.0944; // Maximum velocity
+  double vel_max_ = 2.0944;
   std::map<std::string, std::vector<double>> q_d_;
   double q_d_zero_;
 
@@ -34,6 +35,6 @@ private:
   double tf_const_; // Constant speed time
   double accel_constant_;
   double time_counter_ = 0.0;
-  double sign_ = 1.0;
+  bool sign_ = true;
 
 };

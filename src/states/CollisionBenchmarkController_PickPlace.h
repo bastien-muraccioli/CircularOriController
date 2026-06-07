@@ -3,7 +3,15 @@
 #include <mc_control/fsm/State.h>
 #include "../CollisionBenchmarkController.h"
 
-struct CollisionBenchmarkController_BirjandiRotateHorizontal_InitialPose : mc_control::fsm::State
+#define DR 0
+#define UR 1
+#define UL 2
+#define DL 3
+#define LU 4
+#define RU 5
+
+
+struct CollisionBenchmarkController_PickPlace : mc_control::fsm::State
 {
 
   void configure(const mc_rtc::Configuration & config) override;
@@ -15,4 +23,5 @@ struct CollisionBenchmarkController_BirjandiRotateHorizontal_InitialPose : mc_co
   void teardown(mc_control::fsm::Controller & ctl) override;
 
 private:
+  int state_ = DR;
 };

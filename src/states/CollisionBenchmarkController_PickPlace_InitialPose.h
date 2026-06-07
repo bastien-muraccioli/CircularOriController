@@ -3,7 +3,7 @@
 #include <mc_control/fsm/State.h>
 #include "../CollisionBenchmarkController.h"
 
-struct CollisionBenchmarkController_Rotate : mc_control::fsm::State
+struct CollisionBenchmarkController_PickPlace_InitialPose : mc_control::fsm::State
 {
 
   void configure(const mc_rtc::Configuration & config) override;
@@ -15,8 +15,4 @@ struct CollisionBenchmarkController_Rotate : mc_control::fsm::State
   void teardown(mc_control::fsm::Controller & ctl) override;
 
 private:
-  int state_ = 0;
-  double reset_plot_timer = 0.0;
-  double reset_plot_max_time = 30.0; // 30 seconds
-  bool need_home_ = false;
 };
