@@ -63,6 +63,6 @@ transitions:
 init: CollisionBenchmarkController_Initial
 
 # Plugins for simulation
-Plugins: [TorqueResidual, EnergyResidual, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting, CollisionDetectionForceTorqueSensor]
+Plugins: [TorqueResidual, EnergyResidualTorque, EnergyResidualCurrent, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting, CollisionDetectionForceTorqueSensor, ADCCollisionSensor]
 # Plugins for deployment on real robot
-# Plugins: [RosImuSensor, RosForceSensor, TorqueResidual, EnergyResidual, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting, CollisionDetectionForceTorqueSensor]
+# Plugins: [RosImuSensor, RosForceSensor, TorqueResidual, EnergyResidualTorque, EnergyResidualCurrent, CurrentResidual, CollisionDetectionZurlo, CollisionDetectionJerk, CollisionDetectionMomentumError, CollisionDetectionPiSliding, SuperTwisting, CollisionDetectionForceTorqueSensor, ADCCollisionSensor]
