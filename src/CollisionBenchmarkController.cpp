@@ -37,7 +37,7 @@ void CollisionBenchmarkController::reset(const mc_control::ControllerResetData &
 
 void CollisionBenchmarkController::initTargets()
 { 
-  taskPosHome = Eigen::Vector3d(0.45, 0.0, 0.35);
+  taskPosHome = Eigen::Vector3d(0.45, 0.0, 0.45);
   taskOriHome = Eigen::Quaterniond(-0.5, 0.5, 0.5, 0.5);
   
   postureHome = {{"joint_1", {0}}, {"joint_2", {0.262}}, {"joint_3", {3.14}}, {"joint_4", {-2.269}},
@@ -61,12 +61,12 @@ void CollisionBenchmarkController::initTargets()
 
       
   // Forward
-  taskPosForward = Eigen::Vector3d(0.60, 0.0, 0.35);
+  taskPosForward = Eigen::Vector3d(0.65, 0.0, 0.45);
 
   // Pick Place
   taskOriPickPlace = Eigen::Quaterniond(0.0, 1.0, 0.0, 0.0);
-  taskPosPickPlaceDownRight = Eigen::Vector3d(0.45, 0.0, 0.25);
-  taskPosPickPlaceDownLeft = Eigen::Vector3d(0.45, -0.3, 0.25);
+  taskPosPickPlaceDownRight = Eigen::Vector3d(0.45, 0.0, 0.05);
+  taskPosPickPlaceDownLeft = Eigen::Vector3d(0.45, -0.3, 0.05);
   taskPosPickPlaceUpRight = Eigen::Vector3d(0.45, 0.0, 0.50);
   taskPosPickPlaceUpLeft = Eigen::Vector3d(0.45, -0.3, 0.50);
 }

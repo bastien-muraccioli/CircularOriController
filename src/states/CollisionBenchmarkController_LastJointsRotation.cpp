@@ -6,7 +6,7 @@ void CollisionBenchmarkController_LastJointsRotation::start(mc_control::fsm::Con
 {
   auto & ctl = static_cast<CollisionBenchmarkController &>(ctl_);
   ctl.postureTask->target(ctl.postureHome);
-  ctl.postureTask->stiffness(400);
+  ctl.postureTask->stiffness(100);
 }
 
 bool CollisionBenchmarkController_LastJointsRotation::run(mc_control::fsm::Controller & ctl_)

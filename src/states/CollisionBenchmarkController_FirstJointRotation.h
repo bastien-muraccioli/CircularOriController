@@ -25,8 +25,7 @@ private:
   double q_max_;
   double delta_q_;
   double accel_ratio_ = 0.25; // Ratio of acceleration to maximum velocity
-  // double vel_max_ = 1.8; //2.0944; // Maximum velocity
-  double vel_max_ = 2.0944;
+  double vel_max_ = 1.9; //2.0944; // Maximum velocity
   std::map<std::string, std::vector<double>> q_d_;
   double q_d_zero_;
 

@@ -11,7 +11,7 @@ void CollisionBenchmarkController_Forward::start(mc_control::fsm::Controller & c
   ctl.postureTask->weight(0.1);
   ctl.eeTask->reset();
   ctl.eeTask->positionTask->position(ctl.taskPosHome);
-  ctl.eeTask->positionTask->stiffness(400);
+  ctl.eeTask->positionTask->stiffness(100);
   ctl.eeTask->orientationTask->orientation(ctl.taskOriHome.toRotationMatrix());
   ctl.eeTask->orientationTask->stiffness(20);
   ctl.eeTask->positionTask->weight(10000);
@@ -31,7 +31,7 @@ bool CollisionBenchmarkController_Forward::run(mc_control::fsm::Controller & ctl
     return true;
   }
 
-  if (ctl.eeTask->positionTask->eval().norm() < 0.01)
+  if (ctl.eeTask->positionTask->eval().norm() < 0.05)
   {
    
     if(need_home_)

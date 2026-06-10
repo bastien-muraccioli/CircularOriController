@@ -11,10 +11,10 @@ void CollisionBenchmarkController_PickPlace_InitialPose::start(mc_control::fsm::
   ctl.postureTask->weight(0.1);
   ctl.eeTask->reset();
   ctl.eeTask->positionTask->position(ctl.taskPosPickPlaceDownRight);
-  ctl.eeTask->positionTask->stiffness(10);
+  ctl.eeTask->positionTask->stiffness(1);
   ctl.eeTask->positionTask->weight(10000);
   ctl.eeTask->orientationTask->orientation(ctl.taskOriPickPlace.toRotationMatrix());
-  ctl.eeTask->orientationTask->stiffness(10);
+  ctl.eeTask->orientationTask->stiffness(1);
   ctl.eeTask->orientationTask->weight(1000);
   
   ctl.solver().addTask(ctl.eeTask);
@@ -23,7 +23,7 @@ void CollisionBenchmarkController_PickPlace_InitialPose::start(mc_control::fsm::
 bool CollisionBenchmarkController_PickPlace_InitialPose::run(mc_control::fsm::Controller & ctl_)
 {
   auto & ctl = static_cast<CollisionBenchmarkController &>(ctl_);
-  if (ctl.eeTask->positionTask->eval().norm() < 0.01 && ctl.eeTask->orientationTask->eval().norm() < 0.01)
+  if (ctl.eeTask->eval().norm() < 0.03)
   {
     output("OK");
     return true;
